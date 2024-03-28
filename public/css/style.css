@@ -1,6 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color:rgb(255, 254, 244);
+    margin:0; 
 }
 
 main {
@@ -54,12 +55,13 @@ label {
 
 /*Nav style*/
 nav{
-    background-color: rgb(0, 104, 223);
+    background-color: rgb(0, 104, 223); 
 }
 
 #navList {
     list-style-type: none;
-    padding:1%;  
+    padding:1%; 
+    margin-top:0px; 
 } 
 
 #navList li {
@@ -80,6 +82,30 @@ li:hover {
     padding:1%;  
 }
 
+/*För ta bort- länken*/
+#deleteBtn {
+    background-color: rgb(200, 0, 0);
+    color: #ffff; 
+    font-size:1em; 
+    padding: 1%; 
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2); 
+} 
+
+/*Kursinfo*/
+#courseInfo {
+    font-size:1.25em;
+    border: solid 1px rgb(0, 0, 139); 
+    padding: 1em; 
+    border-radius: 5px;
+}
+
+/*Om*/
+#about {
+    font-size: 1.25em; 
+    max-width: 35em; 
+}
+
 /*footer style*/
 footer {
     text-align: center;
@@ -87,6 +113,6 @@ footer {
     margin-left:0;
     margin-right: 0;   
     padding:1em; 
-    margin-top:235px; 
+    margin-top:260px; 
 }
 

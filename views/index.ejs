@@ -19,12 +19,17 @@
 
         <%if (locals.courses.length > 0) {%>
             <%locals.courses.forEach((course) => {%>
-                <article>
-                    <p>Namn: <%= course.coursename%></p>
-                    <p>Kurskod: <%= course.coursecode%></p>
-                    <p>Kursplan: <%= course.syllabus %></p>
-                    <p>Progression: <%= course.progression%></p>
-                    <a href="/delete/<%= course.id%>">Ta bort kurs</a>
+                <article id="courseInfo">
+                    <p><b>Namn:</b><br>
+                        <%= course.coursename%></p>
+                    <p><b>Kurskod:</b><br>
+                         <%= course.coursecode%></p>
+                    <p><b>Kursplan:</b><br>
+                         <%= course.syllabus %></p>
+                    <p><b>Progression:</b><br>
+                         <%= course.progression%></p>
+                    <br>
+                    <a id= "deleteBtn" href="/delete/<%= course.id%>">Ta bort kurs</a>
                 </article>
             <%});%>
             <%}%>
