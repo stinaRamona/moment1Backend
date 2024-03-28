@@ -97,7 +97,8 @@ li:hover {
     font-size:1.25em;
     border: solid 1px rgb(0, 0, 139); 
     padding: 1em; 
-    border-radius: 5px;
+    border-radius: 5px; 
+    margin: 2%; 
 }
 
 /*Om*/
