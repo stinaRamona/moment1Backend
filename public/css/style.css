@@ -1,11 +1,64 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color:blanchedalmond;
+    background-color:rgb(255, 254, 244);
 }
 
 main {
     max-width:800px; 
     margin: 0 auto; 
     padding:2%; 
-    background-color: aliceblue;
+    background-color: rgba(0, 119, 255, 0.5);
+} 
+
+/*Formulär*/
+label {
+    font-weight: bold; 
 }
+
+#courseName, #courseCode, #syllabus {
+    width:80%; 
+    padding:1em; 
+    border-radius: 5px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+} 
+
+#progression {
+    width:10%; 
+    padding:0.5em; 
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+#submitBtn {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    font-weight: bold; 
+    padding:1%; 
+    border-radius:5px; 
+    border: 3px;
+    color: #ffff;
+    background-color:rgb(0, 72, 155); 
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+    cursor: pointer;
+} 
+
+/*För felmeddelande*/
+#error {
+    color:rgb(255, 0, 0); 
+    background-color: rgb(255, 238, 0);
+    padding:1%; 
+    width:50%; 
+    font-weight: bolder; 
+}
+
+/*footer style*/
+footer {
+    text-align: center;
+    background-color: rgba(0, 119, 255, 0.5);
+    margin-left:0;
+    margin-right: 0;   
+    padding:1em; 
+    margin-top:235px; 
+}
+
