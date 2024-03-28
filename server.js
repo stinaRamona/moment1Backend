@@ -65,7 +65,19 @@ app.post("/new", (req, res) => {
     })
 }) 
 
+//Radering av kurs 
+app.get("/delete/:id", (req, res) => {
+    let id = req.params.id; 
 
+    db.run("DELETE FROM courses WHERE id=?", id, (err) =>{
+        if(err) {
+            console.log(err.message); 
+        }
+
+        res.redirect("/"); 
+    })
+
+})
 
 //startar servern 
 app.listen(port, () =>{

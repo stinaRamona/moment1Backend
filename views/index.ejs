@@ -20,10 +20,11 @@
         <%if (locals.courses.length > 0) {%>
             <%locals.courses.forEach((course) => {%>
                 <article>
-                    <p><%= course.courseName%></p>
-                    <p><%= course.courseCode%></p>
-                    <p><%= course.syllabus %></p>
-                    <p><%= course.progression%></p>
+                    <p>Namn: <%= course.coursename%></p>
+                    <p>Kurskod: <%= course.coursecode%></p>
+                    <p>Kursplan: <%= course.syllabus %></p>
+                    <p>Progression: <%= course.progression%></p>
+                    <a href="/delete/<%= course.id%>">Ta bort kurs</a>
                 </article>
             <%});%>
             <%}%>
