@@ -16,12 +16,34 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 //Routing 
 app.get("/", (req, res) => {
-    res.render("index", {
-        err: ""
-    }); 
+    //Läs ut kurser 
+    db.all("SELECT * FROM courses;", (err, rows) =>{
+        if(err){
+            console.log(err.message)
+        }
+        res.render("index", {
+            err: "",
+            courses: rows
+        });
+    })
 }) 
 
-app.post("/", (req, res) => {
+//för formulär
+app.get("/new", (req, res) => {
+    res.render("new", {
+        err: ""
+    }); 
+})
+
+//för om sidan
+app.get("/about", (req, res) => {
+    res.render("about", {
+        err: ""
+    }); 
+})
+
+//Input från formuläret till databasen 
+app.post("/new", (req, res) => {
     let courseName= req.body.courseName; 
     let courseCode= req.body.courseCode; 
     let syllabus= req.body.syllabus; 
@@ -33,15 +55,17 @@ app.post("/", (req, res) => {
         const input = db.prepare("INSERT INTO courses(coursename, coursecode, syllabus, progression) VALUES(?, ?, ?, ?);"); 
         input.run(courseName, courseCode, syllabus, progression); 
         input.finalize(); 
-        
+
     } else {
         err = "Vänligen fyll i alla fälten med korrekta kursuppgifter"
     } 
 
-    res.render("index", {
+    res.render("new", {
         err:err
     })
-})
+}) 
+
+
 
 //startar servern 
 app.listen(port, () =>{
